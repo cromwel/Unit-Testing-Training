@@ -1,0 +1,10 @@
+generateWelcomeMessage()
+      │
+      ▼
+calls dateUtils.getFormattedDate(date)
+      │
+      ▼
+Real function runs → returns actual formatted date
+      │
+      ▼
+Returns: "Hello Jane, today is MM/DD/YYYY"

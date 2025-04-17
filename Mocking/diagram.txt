@@ -1,0 +1,30 @@
+jest.spyOn(dateUtils, 'getFormattedDate').mockReturnValue('April 8, 2025')
+                    │
+                    ▼
+generateWelcomeMessage()
+      │
+      ▼
+calls dateUtils.getFormattedDate(date)
+      │
+      ▼
+🔁 Mock intercepts the call
+      │
+      ▼
+Returns: 'April 8, 2025' (Mocked!)
+      │
+      ▼
+Returns: "Hello Jane, today is April 8, 2025"
+
+
+
+
+[generateWelcomeMessage()]
+         |
+         ▼
+[dateUtils.getFormattedDate()]  ←────── jest.spyOn(...).mockReturnValue()
+         |                                      ↑
+         |<------------ Mock intercepts --------┘
+         ▼
+   Returns: 'April 8, 2025'
+         ▼
+[Final Output: Hello Jane, today is April 8, 2025]
